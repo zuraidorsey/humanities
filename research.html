@@ -45,8 +45,8 @@
         }
 
         .research-highlight {
-            background-color: rgba(232, 0, 128, 0.08);
-            border-left: 4px solid #e80080;
+            background-color: rgba(232, 84, 128, 0.08);
+            border-left: 4px solid #e75480;
             padding: var(--spacing-lg);
             margin: var(--spacing-lg) 0;
         }
@@ -56,6 +56,7 @@
             background-color: var(--color-light-gray);
             margin: var(--spacing-md) 0;
             border: 1px solid var(--color-border);
+            border-left: 4px solid #e75480;
         }
 
         .methodology {
@@ -66,8 +67,144 @@
             font-style: italic;
             color: var(--color-text-light);
             padding: var(--spacing-lg);
-            border-left: 2px solid var(--color-text-light);
+            border-left: 2px solid #e75480;
             margin: var(--spacing-lg) 0;
+        }
+
+        /* Chart Styling */
+        .chart-section {
+            margin: var(--spacing-xl) 0;
+            padding: var(--spacing-lg);
+            background-color: var(--color-light-gray);
+            border: 1px solid var(--color-border);
+        }
+
+        .chart-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-dark-gray);
+        }
+
+        .chart-bar {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .bar-label-text {
+            font-weight: 500;
+        }
+
+        .bar-label-value {
+            color: #e75480;
+            font-weight: 600;
+        }
+
+        .bar-container {
+            background-color: #e8e8e8;
+            height: 28px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f8c8dc, #e75480);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: var(--spacing-sm);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .line-chart {
+            margin: var(--spacing-lg) 0;
+            padding: var(--spacing-lg);
+            border: 1px solid var(--color-border);
+            background-color: white;
+        }
+
+        .chart-point {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #e75480;
+            border-radius: 50%;
+            margin: 0 var(--spacing-xs);
+            vertical-align: middle;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .metric-card {
+            padding: var(--spacing-lg);
+            background-color: white;
+            border: 2px solid #f8c8dc;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e75480;
+            margin: var(--spacing-md) 0;
+        }
+
+        .metric-label {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trend-arrow {
+            font-size: 1.5rem;
+            margin: var(--spacing-sm) 0;
+        }
+
+        .trending-up {
+            color: #e75480;
+        }
+
+        .scatter-legend {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            font-size: 0.9rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .legend-box {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            background-color: #f8c8dc;
+            border: 2px solid #e75480;
         }
     </style>
 </head>
@@ -175,8 +312,70 @@
                 <section class="content-section">
                     <h2 class="section-heading">Economic Impact of AI in Fashion</h2>
                     <div class="divider-line"></div>
+
+                    <div class="comparison-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Global Fashion Revenue 2024</div>
+                            <div class="metric-value">$1.79T</div>
+                            <div class="trend-arrow trending-up">↑ 28.8% since 2020</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">AI Market Growth</div>
+                            <div class="metric-value">123%</div>
+                            <div class="trend-arrow trending-up">↑ $1.0B to $2.23B (2020–2024)</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-section">
+                        <div class="chart-title">Cumulative Economic Benefits of AI in Fashion (USD Billions)</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2021</span>
+                                <span class="bar-label-value">$3.4B</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 27%;">$3.4B</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2022</span>
+                                <span class="bar-label-value">$4.9B</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 39%;">$4.9B</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2023</span>
+                                <span class="bar-label-value">$7.3B</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 57%;">$7.3B</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2024</span>
+                                <span class="bar-label-value">$9.4B</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 74%;">$9.4B</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2025 (Proj.)</span>
+                                <span class="bar-label-value">$12.7B</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;">$12.7B</div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <p><strong>Estimated Productivity Gains & Cost Savings (USD Billions)</strong></p>
+                    <p style="margin-top: var(--spacing-lg);"><strong>Estimated Productivity Gains & Cost Savings (USD Billions)</strong></p>
                     <table class="data-table">
                         <thead>
                             <tr>
@@ -225,46 +424,57 @@
                 <section class="content-section">
                     <h2 class="section-heading">Regional AI Adoption & Legal Environment</h2>
                     <div class="divider-line"></div>
-                    
-                    <p><strong>AI Adoption by Region (2023)</strong></p>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Region</th>
-                                <th>Adoption Rate (%)</th>
-                                <th>Key Market Drivers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>North America</td>
-                                <td>35%</td>
-                                <td>Strong IP infrastructure, high investment</td>
-                            </tr>
-                            <tr>
-                                <td>Europe</td>
-                                <td>30%</td>
-                                <td>GDPR compliance, sustainable fashion focus</td>
-                            </tr>
-                            <tr>
-                                <td>Asia-Pacific</td>
-                                <td>25%</td>
-                                <td>Fast manufacturing, emerging regulation</td>
-                            </tr>
-                            <tr>
-                                <td>Latin America</td>
-                                <td>5%</td>
-                                <td>Limited infrastructure, growth potential</td>
-                            </tr>
-                            <tr>
-                                <td>Middle East & Africa</td>
-                                <td>5%</td>
-                                <td>Early-stage adoption, regulatory gaps</td>
-                            </tr>
-                        </tbody>
-                    </table>
 
-                    <p style="margin-top: var(--spacing-lg);"><strong>Legal Strength Scores by Fashion Capital (0–10 scale)</strong></p>
+                    <div class="chart-section">
+                        <div class="chart-title">AI Adoption in Fashion by Region (2023)</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">North America</span>
+                                <span class="bar-label-value">35%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Europe</span>
+                                <span class="bar-label-value">30%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Asia-Pacific</span>
+                                <span class="bar-label-value">25%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Latin America</span>
+                                <span class="bar-label-value">5%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Middle East & Africa</span>
+                                <span class="bar-label-value">5%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: var(--spacing-xl);"><strong>Legal Strength Scores by Fashion Capital (0–10 scale)</strong></p>
                     <table class="data-table">
                         <thead>
                             <tr>
@@ -313,6 +523,123 @@
                             </tr>
                         </tbody>
                     </table>
+                </section>
+
+                <!-- Brand Risk Assessment -->
+                <section class="content-section">
+                    <h2 class="section-heading">The IP Crisis: Rising Infringement & Job Displacement</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="comparison-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">IP Infringement Growth</div>
+                            <div class="metric-value">+375%</div>
+                            <div class="trend-arrow trending-up">↑ From 40 to 190 cases (2020–2024)</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Job Displacement Risk</div>
+                            <div class="metric-value">55%</div>
+                            <div class="trend-arrow trending-up">↑ By 2025 in fashion workforce</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-section">
+                        <div class="chart-title">IP Infringement Cases in Fashion (2020–2024)</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2020</span>
+                                <span class="bar-label-value">40 cases</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 21%;">40</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2021</span>
+                                <span class="bar-label-value">60 cases</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 32%;">60</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2022</span>
+                                <span class="bar-label-value">90 cases</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 47%;">90</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2023</span>
+                                <span class="bar-label-value">130 cases</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 68%;">130</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">2024</span>
+                                <span class="bar-label-value">190 cases</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;">190</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-section" style="margin-top: var(--spacing-xl);">
+                        <div class="chart-title">Workforce Automation Risk by Role (2025 Forecast)</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Tech Pack Creators</span>
+                                <span class="bar-label-value">60%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Illustrators</span>
+                                <span class="bar-label-value">55%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Textile Artists</span>
+                                <span class="bar-label-value">40%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Pattern Makers</span>
+                                <span class="bar-label-value">45%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Fashion Designers</span>
+                                <span class="bar-label-value">35%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Brand Risk Assessment -->
@@ -380,10 +707,69 @@
                         </tbody>
                     </table>
 
-                    <div class="research-highlight">
+                    <div class="chart-section" style="margin-top: var(--spacing-lg);">
+                        <div class="chart-title">AI Litigation Risk by Brand</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🔴 Shein</span>
+                                <span class="bar-label-value">7.8/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🟠 Zara</span>
+                                <span class="bar-label-value">6.2/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 62%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🟠 H&M</span>
+                                <span class="bar-label-value">5.9/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 59%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🟡 Prada</span>
+                                <span class="bar-label-value">4.3/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 43%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🟢 Gucci</span>
+                                <span class="bar-label-value">3.5/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">🟢 Burberry</span>
+                                <span class="bar-label-value">3.1/10</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 31%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="research-highlight" style="margin-top: var(--spacing-lg);">
                         <strong>Key Insight:</strong> Brands with high AI usage and weak patent defense (Shein, Zara) face the highest litigation risk. Conversely, luxury brands investing in strong IP infrastructure (Gucci, Burberry, LVMH) maintain lower exposure despite competitive pressure.
                     </div>
-                </section>
+
+                    <p style="margin-top: var(--spacing-lg);"><strong>Detailed Risk Assessment by Brand</strong></p>
 
                 <!-- Code Implementation -->
                 <section class="content-section">
@@ -568,8 +954,61 @@ for i in range(3):  # Original designs
                 <section class="content-section">
                     <h2 class="section-heading">Artist Concerns & Creative Rights</h2>
                     <div class="divider-line"></div>
-                    
-                    <p><strong>Artist-Reported Concerns About Generative AI in Fashion (% reporting issue)</strong></p>
+
+                    <div class="chart-section">
+                        <div class="chart-title">Artist-Reported Concerns About Generative AI in Fashion</div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Design Duplication</span>
+                                <span class="bar-label-value">82%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 82%;">82%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Style Mimicry without Consent</span>
+                                <span class="bar-label-value">77%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 77%;">77%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Loss of Originality</span>
+                                <span class="bar-label-value">74%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 74%;">74%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Uncredited Art Usage</span>
+                                <span class="bar-label-value">69%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 69%;">69%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-label">
+                                <span class="bar-label-text">Market Flooding with AI Art</span>
+                                <span class="bar-label-value">60%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 60%;">60%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: var(--spacing-lg);">
+                        These concerns reflect a fundamental tension: while AI accelerates creative output and lowers design costs, it threatens the livelihoods and creative autonomy of human artists. Without robust legal frameworks, AI systems trained on existing designs can replicate styles without consent or compensation.
+                    </p>
+
+                    <p style="margin-top: var(--spacing-lg);"><strong>Artist-Reported Concerns About Generative AI in Fashion (% reporting issue)</strong></p>
                     <table class="data-table">
                         <thead>
                             <tr>
