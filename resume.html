@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Zurai Dorsey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <h1>Zurai Dorsey</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contract.html" class="nav-link">Contract</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <span class="category-label">Professional</span>
+            <h1 class="page-title">Resume & Curriculum Vitae</h1>
+            <p class="page-subtitle">Academic and professional background</p>
+        </section>
+
+        <div class="content-grid">
+            <article class="main-column article-content">
+                <section class="content-section">
+                    <h2 class="section-heading">Download Resume</h2>
+                    <div class="divider-line"></div>
+                    <p>A complete version of my resume and curriculum vitae is available for download:</p>
+                    <div class="download-button-container">
+                        <a href="assets/resume.pdf" download class="download-button">
+                            ↓ Download PDF Resume
+                        </a>
+                    </div>
+                </section>
+
+                <section class="content-section pdf-viewer">
+                    <h2 class="section-heading">Resume Preview</h2>
+                    <div class="divider-line"></div>
+                    <div id="pdfContainer" class="pdf-container">
+                        <iframe 
+                            id="pdfFrame" 
+                            src="assets/resume.pdf" 
+                            type="application/pdf"
+                            width="100%"
+                            height="800px"
+                            style="border: 1px solid #e0e0e0; margin-top: 1.5rem;"
+                        ></iframe>
+                    </div>
+                    <div id="pdfFallback" class="pdf-fallback" style="display: none;">
+                        <p><strong>Note:</strong> PDF preview is not available in your browser or the resume file is missing.</p>
+                        <p><a href="assets/resume.pdf" download class="fallback-link">Download the resume PDF directly →</a></p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Education</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Bachelor of Arts, Honors Pre-Law Individualized Major</h3>
+                        <p class="resume-details">The University of Texas at Austin | August 2023 – May 2026</p>
+                        <p class="resume-meta">Honors Major: International Political Economy with focus in AI and Cybersecurity | Second BA in Government | Minors: Business and History | GPA: 3.8/4.0</p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Global Economics & Law Exchange Program</h3>
+                        <p class="resume-details">Esade Business School – Barcelona, Spain | January 2025 – May 2025</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Research Experience</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Research Assistant</h3>
+                        <p class="resume-details">UT Austin Department of International Relations and Global Studies | January 2026 – Present</p>
+                        <p>
+                            Conducting international electoral research. Compiling and verifying legislator-level data on gender and ethnic representation. Supporting quantitative analysis of intersectional political inclusion.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">AI Governance Research Project</h3>
+                        <p class="resume-details">McCombs School of Business & UT Government Department | August 2025 – December 2025</p>
+                        <p>
+                            Compared U.S. and EU AI governance regimes. Assessed compliance standards in global technology markets. Analyzed GDPR, CCPA, NIST frameworks, ISO 27701, SOC 2, and IP law.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Professional Experience</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Data Governance Specialist</h3>
+                        <p class="resume-details">Workday | January 2026 – Present</p>
+                        <p>
+                            Supporting enterprise asset standardization. Identifying governance gaps across 1,200+ assets using AI tools. Strengthening compliance and internal control accuracy.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Talent Acquisition Security Intern</h3>
+                        <p class="resume-details">SentinelOne | June 2025 – September 2025</p>
+                        <p>
+                            Researched interview security platforms. Supported ATS security integration. Conducted competitive talent and technical candidate research.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Governance, Risk & Compliance Intern</h3>
+                        <p class="resume-details">SpyCloud | August 2024 – December 2024</p>
+                        <p>
+                            Supported ISO 27001 and SOC 2 readiness. Managed compliance documentation and regulatory logs.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Cybersecurity Legal Intern</h3>
+                        <p class="resume-details">SpyCloud | June 2024 – August 2024</p>
+                        <p>
+                            Drafted and reviewed NDAs, MSAs, DPAs, and SaaS agreements. Conducted legal research in IP, cybersecurity, and data privacy.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Technical Skills</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="skills-grid resume-skills">
+                        <div class="skill-group">
+                            <h4 class="skill-category">Programming</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>R Studio</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-category">Business Tools</h4>
+                            <ul>
+                                <li>Microsoft Office Suite</li>
+                                <li>Google Suite</li>
+                                <li>Jira</li>
+                                <li>Asana</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-category">Design & Legal Tech</h4>
+                            <ul>
+                                <li>Adobe Suite</li>
+                                <li>Canva</li>
+                                <li>Figma</li>
+                                <li>Ironclad</li>
+                                <li>LinkedIn Recruiter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Honors & Awards</h2>
+                    <div class="divider-line"></div>
+                    <ul class="honors-list">
+                        <li>COLA Dean's Honors List – Summa Cum Laude</li>
+                        <li>McCombs Global Change Makers Award</li>
+                        <li>Liberal Arts Study Abroad Full Ride Merit Scholarship</li>
+                        <li>Humanities Honors Doyle Scholarship in Western Civilization</li>
+                        <li>Humanities Honors Excellence Scholarship</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Leadership</h2>
+                    <div class="divider-line"></div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Founder & Vice President</h3>
+                        <p class="resume-details">Longhorn Legal Coalition | January 2024 – December 2024</p>
+                        <p>
+                            Built pre-law organization from the ground up. Organized LSAT prep workshops and legal networking events.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h3 class="resume-title">Alpha Kappa Psi Business Fraternity</h3>
+                        <p class="resume-details">VP of Marketing & Recruitment; VP of Alumni Relations | August 2023 – December 2025</p>
+                        <p>
+                            Led recruitment strategy for 500+ applicants. Developed alumni and corporate partnerships.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Relevant Coursework</h2>
+                    <div class="divider-line"></div>
+                    <ul class="course-list">
+                        <li>Artificial Intelligence Compliance</li>
+                        <li>AI Ethics and Research</li>
+                        <li>AI and Programming for Government</li>
+                        <li>International Political Economy</li>
+                        <li>Media Law</li>
+                        <li>Business Law</li>
+                        <li>PR Law</li>
+                        <li>Trust and Safety</li>
+                        <li>Risk Management</li>
+                        <li>Technical Cybersecurity</li>
+                        <li>Economic Analysis using Python</li>
+                        <li>International Trade</li>
+                        <li>Fashion PR</li>
+                        <li>Global Economic Trends</li>
+                        <li>International Communication</li>
+                    </ul>
+                </section>
+            </article>
+
+            <aside class="sidebar">
+                <section class="sidebar-block">
+                    <h4 class="sidebar-title">Contact</h4>
+                    <div class="divider-line"></div>
+                    <ul class="sidebar-list">
+                        <li><a href="mailto:zuraidorsey@gmail.com">zuraidorsey@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/zurai" target="_blank">LinkedIn Profile</a></li>
+                        <li><a href="https://zuraidorsey.wixsite.com/my-site" target="_blank">Portfolio Website</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-block">
+                    <h4 class="sidebar-title">Quick Navigation</h4>
+                    <div class="divider-line"></div>
+                    <ul class="sidebar-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contract.html">Contract</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-block">
+                    <h4 class="sidebar-title">Download</h4>
+                    <div class="divider-line"></div>
+                    <p><a href="assets/resume.pdf" download class="sidebar-download-link">Download Full CV (PDF)</a></p>
+                    <p style="font-size: 0.875rem; color: #666; margin-top: 1rem;">
+                        Last updated: February 2026
+                    </p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Zurai Dorsey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

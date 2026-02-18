@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Zurai Dorsey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <h1>Zurai Dorsey</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contract.html" class="nav-link">Contract</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <span class="category-label">Connect</span>
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">I'm interested in discussing scholarship, collaboration, and ideas</p>
+        </section>
+
+        <div class="content-grid">
+            <article class="main-column article-content">
+                <section class="content-section">
+                    <h2 class="section-heading">Contact Information</h2>
+                    <div class="divider-line"></div>
+                    
+                    <div class="contact-info-block">
+                        <h3 class="contact-label">Email</h3>
+                        <p><a href="mailto:zuraidorsey@gmail.com" class="contact-link">zuraidorsey@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <h3 class="contact-label">Professional Networks</h3>
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.linkedin.com/in/zurai" target="_blank" rel="noopener noreferrer">
+                                    LinkedIn Profile →
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <h3 class="contact-label">Location</h3>
+                        <p>Austin, Texas<br>University of Texas at Austin</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Send a Message</h2>
+                    <div class="divider-line"></div>
+                    <p>Have a question or want to collaborate? Use the form below or email me directly.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                required
+                                placeholder="Your full name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required
+                                placeholder="your@email.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input" 
+                                required
+                                placeholder="What is this about?"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                required
+                                rows="6"
+                                placeholder="Your message..."
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">Send Message</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-heading">Response Times</h2>
+                    <div class="divider-line"></div>
+                    <p>
+                        I aim to respond to all inquiries within 3-5 business days. For urgent matters, please mark your email as such or reach out through multiple channels.
+                    </p>
+                </section>
+            </article>
+
+            <aside class="sidebar">
+                <section class="sidebar-block">
+                    <h4 class="sidebar-title">Quick Navigation</h4>
+                    <div class="divider-line"></div>
+                    <ul class="sidebar-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contract.html">Contract</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-block">
+                    <h4 class="sidebar-title">Connect</h4>
+                    <div class="divider-line"></div>
+                    <ul class="sidebar-list">
+                        <li><a href="mailto:zuraidorsey@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/zurai" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://zuraidorsey.wixsite.com/my-site" target="_blank">Portfolio</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Zurai Dorsey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
